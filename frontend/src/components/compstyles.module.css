@@ -1,0 +1,38 @@
+input{
+    padding: 5px;
+    width: 300px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+}
+.icontainter{
+    max-width: 300px;
+    display: flex;
+
+}
+.space{
+    height: 20px
+}
+p{
+    font-size: 20px;
+    font-family: Karla;
+    color: white;
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    background-color: black;
+    color: white;
+    font-family: Karla;
+    border: 2px solid red;
+    border-radius: 10px;
+
+    width: 100px;
+    height: auto;
+}

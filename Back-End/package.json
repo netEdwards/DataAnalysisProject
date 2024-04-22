@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "d3": "^7.9.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.0.0",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "helmet": "^7.1.0",
+    "mongoose": "^8.3.1",
+    "nodemon": "^3.1.0",
+    "ratelimit": "^0.0.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  }
+}

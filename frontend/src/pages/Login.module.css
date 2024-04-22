@@ -1,0 +1,96 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    background-image: url('/src/media/bground.jpg');
+    background-size: contain;
+}
+.line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3px;
+    height: 85vh;
+    background-color: white;
+    border-radius: 20%;
+}
+.lineholder{
+    background-color: transparent;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ==== Left side of login ==== */
+.leftSide{
+    width: 50%;
+    height: 100vh;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagebox{
+    width: 75%;
+    height: 91%;
+    background-image: url('/src/media/login1.jpg');
+    background-size: cover;
+
+    border: 10px solid rgb(145, 144, 144);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textbox{
+    width: 75%;
+    height: 30%;
+    background-color: rgba(142, 0, 0, 0.576);
+    
+    border: 5px solid black;
+    border-radius: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-justify: auto;
+    font-family: Karla;
+}
+/* ==== Right side of login ==== */
+.rcontainer{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+.lbox1{
+    width: 450px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
+.loginlogo{
+    border: 3px solid grey;
+    border-radius: 50%;
+}
+
+
+
+h1{
+    margin: 0;
+    color: white;
+    font-size: 3.0rem;
+}
