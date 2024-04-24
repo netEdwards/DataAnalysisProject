@@ -40,6 +40,7 @@
     justify-content: center;
 }
 .feed{
+    padding: 20px;
     position: relative;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -56,4 +57,28 @@
 .arrow{
     font-size: 50px;
     color: rgb(255, 255, 255);
+}
+
+/* NAV AND BUTTONS */
+.title{
+    width: 100px;
+    color: rgb(255, 90, 90);
+    text-shadow: 1px 1px 2px rgb(253, 253, 253);
+    font-family: Karla;
+    font-size: 30px;
+}
+.navbox button{
+    background: none;
+    border: none;
+    border-radius: 40px;
+    width: 200px;
+    padding: 10px;
+    
+}
+.navbox button:hover{
+    background-color: rgb(20, 30, 37);
+    font-size: 20px;
+}
+.navbox button h1{
+    color: white !important;
 }

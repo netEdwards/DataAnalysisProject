@@ -1,12 +1,16 @@
 import React from 'react';
+import {useState, useEffect} from 'react';
 import styles from './Login.module.css';
 import Lbox from '../components/loginbox';
 import logo from '../media/logo.jpg';
 
+
 const Login = () => {
+
+
     return (
         <div id="Container" className={styles.main}>
-            <div id='leftSide' className={styles.leftSide}>
+            {/* <div id='leftSide' className={styles.leftSide}>
                 <div id='imageContainer' className={styles.imagebox}>
                     <div id='box' className={styles.textbox}>
                         <h1>Food Safety <br/> Visualizer</h1>
@@ -17,7 +21,8 @@ const Login = () => {
             <div className={styles.lineholder}>
                 <div className={styles.line}>
                 </div>
-            </div>
+            </div> */}
+            
             <div id='rightside' className={styles.rcontainer}>
                 <div id='loginbox'>
                     <div id='logo' className={styles.logoc}>

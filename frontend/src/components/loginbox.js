@@ -1,21 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import styles from './compstyles.module.css';
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 const Lbox = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const handleSubmit = (e) => {
+    const navigate = useNavigate();
+    
+    const handleLogin = async (e) => {
         e.preventDefault();
-        console.log(username, password);
-        setUsername("");
-        setPassword("");
-    }
+        try {
+            const response = await axios.post('/login', {
+                username: username,
+                password: password
+            });
+            if (response.data.token) {
+                console.log('Login successful:', response.data.token);
+                localStorage.setItem('userToken', response.data.token);
+                navigate('/home');
+            } else {
+                alert('Login failed: ' + response.data.message);
+            }
+        } catch (error) {
+            alert('Login failed: ' + (error.response?.data?.message || 'Network error'));
+        }
+    };
+
     return(
-        <form>
+        <form onSubmit={handleLogin} className={styles.lbox}>
             <div className={styles.icontainer}>
                 <p>Username</p>
                 <input
+                className={styles.inp}
                 placeholder="Username..."
                 type="text"
                 id="username"
@@ -28,6 +46,7 @@ const Lbox = () => {
             <div className={styles.icontainer}>
                 <p>Key</p>
                 <input
+                className={styles.inp}
                 placeholder="Key..."
                 type="password"
                 id="password"
@@ -37,7 +56,7 @@ const Lbox = () => {
                 />
                 <p>This is provided by <br/> an Admin/Adrian!</p>
             </div>
-            <button type="submit" onClick={handleSubmit}>Enter</button>
+            <button type="submit">Enter</button>
         </form>
     )
 }
