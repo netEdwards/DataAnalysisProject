@@ -5,9 +5,11 @@
 }
 .container{
     display: flex;
-    flex-direction: row;
     width: 100%;
     height: 100vh;
+}
+.navcomp{
+    display: flex;
 }
 .navbox{
     color: rgb(255, 255, 255);
@@ -33,10 +35,11 @@
     text-align: center;
 }
 .feedbox{
+    grid-column: span 2;
+    display: flex;
     overflow: hidden;
     width: 100%;
     height: 100vh;
-    display: flex;
     justify-content: center;
 }
 .feed{
@@ -54,6 +57,19 @@
     background-color: rgb(30, 44, 56);
     align-items: center;
 }
+.nothing{
+    margin-top: 50px;
+    color: white;
+    font-family: Karla;
+    border-radius: 70px;
+    padding: 20px;
+    text-align: center;
+}
+.nothing:hover{
+    background-color: rgb(62, 103, 140);
+    color: rgb(255, 206, 206);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
 .arrow{
     font-size: 50px;
     color: rgb(255, 255, 255);
@@ -67,18 +83,50 @@
     font-family: Karla;
     font-size: 30px;
 }
-.navbox button{
-    background: none;
-    border: none;
-    border-radius: 40px;
+
+
+/* btcon */
+/* container of the it all */
+.rtwil{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+
+/* left side */
+.btcon{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: start;
+}
+.selectbox{
+    margin-top: 100px;
+}
+.sel{
+    border: 3px solid rgb(255, 90, 90);
+    border-radius: 30px;
     width: 200px;
-    padding: 10px;
+    height: 50px;
+    color: rgb(255, 248, 248);
+    background-color:rgb(33, 48, 60);
+}
+.sel div{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    background-color: rgb(30, 44, 56);
+    border-radius: 25px;
+    border: none;
+}
+.sel span{
     
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    font-family: Karla;
+    border: none;
 }
-.navbox button:hover{
-    background-color: rgb(20, 30, 37);
-    font-size: 20px;
-}
-.navbox button h1{
-    color: white !important;
-}
+

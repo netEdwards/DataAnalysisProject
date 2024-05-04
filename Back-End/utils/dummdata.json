@@ -1,0 +1,356 @@
+[
+    {
+      question: {
+        id: '5.16.4',
+        qText: 'Record weight of grilled chicken slices.',
+        qFinding: 'Grilled chicken slices do not meet weight requirement at least 2.9 oz (82.21 g).\r\n' +
+          '• Weight: 1 oz.',
+        fixed: 'no',
+        observer: 'Kimberly Hannah',
+        oDate: 2024-04-24T04:00:00.000Z,
+        oTime: '12:37'
+      },
+      _id: new ObjectId('662f01c59a76f1d9b5e689e8'),
+      store: 'CFA - 02679 Dallas (GA) FSU',
+      aType: 'eRQA',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: '',
+      category: 'PRODUCT',
+      subCategory: 'Cold Entrées',
+      assessment: 'Chick-fil-A® Grilled Market Salad - Finished Product',
+      __v: 0
+    },
+    {
+      question: {
+        id: '5.16.4',
+        qText: 'Record weight of grilled chicken slices.',
+        qFinding: 'Grilled chicken slices do not meet weight requirement at least 2.9 oz (82.21 g).\r\n' +
+          '• Weight: 1 oz.',
+        fixed: 'no',
+        observer: 'Kimberly Hannah',
+        oDate: 2024-04-24T04:00:00.000Z,
+        oTime: '12:37'
+      },
+      _id: new ObjectId('662f025dd7904849e73770ce'),
+      store: 'CFA - 02679 Dallas (GA) FSU',
+      aType: 'eRQA',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: '',
+      category: 'PRODUCT',
+      subCategory: 'Cold Entrées',
+      assessment: 'Chick-fil-A® Grilled Market Salad - Finished Product',
+      __v: 0
+    },
+    {
+      question: {
+        id: '301.102.1',
+        qText: 'Are all TCS foods in the boards/cook-line area properly date labeled? Check all refrigeration units in this area to ensure all TCS foods have an accurate date label.',
+        qFinding: '• Observed unlabeled TCS foods in this area. Use the notes section or the Other tab to notate what unlabeled TCS food was observed.\r\n' +
+          '• Observed unlabeled TCS foods in this area. Use the notes section or the Other tab to notate what unlabeled TCS food was observed.\r\n',
+        fixed: 'yes',
+        observer: 'Sydney Kazanjian',
+        oDate: 2024-04-25T04:00:00.000Z,
+        oTime: '12:50'
+      },
+      _id: new ObjectId('662f025ed7904849e73770d2'),
+      store: 'CFA - 02679 Dallas (GA) FSU',
+      aType: 'SAFE Daily Critical',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: 'MEDIUM RISK',
+      category: 'PRODUCTION ENVIRONMENT',
+      subCategory: 'Time and Temperature',
+      assessment: 'Date Labeling TCS Foods',
+      __v: 0
+    },
+    {
+      question: {
+        id: '4.1.12',
+        qText: 'Based on experience, does Chick-fil-A Chicken Sandwich meet taste and texture requirements?',
+        qFinding: '• Chick-fil-A Chicken Sandwich lacks flavor/tastes bland\r\n' +
+          '• Chick-fil-A Chicken Sandwich lacks flavor/tastes bland\r\n',
+        fixed: 'yes',
+        observer: 'Sydney Kazanjian',
+        oDate: 2024-04-25T04:00:00.000Z,
+        oTime: '12:56'
+      },
+      _id: new ObjectId('662f025ed7904849e73770d4'),
+      store: 'CFA - 02679 Dallas (GA) FSU',
+      aType: 'eRQA',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: '',
+      category: 'PRODUCT',
+      subCategory: 'Hot Entrées',
+      assessment: 'Chick-fil-A® Chicken Sandwich - Finished Product',
+      __v: 0
+    },
+    {
+      question: {
+        id: '6.1.1',
+        qText: 'Record internal product temperature of Waffle Potato Fries. (Test 3 Fries.)',      
+        qFinding: 'Internal product temperature of Waffle Potato Fries is not 170°F or higher.\r\n' +
+          '• Fry #1: 187 °F\r\n' +
+          '• Fry #2: 186 °F\r\n' +
+          '• Fry #3: 166 °F',
+        fixed: 'no',
+        observer: 'Diego Miranda-Barahona',
+        oDate: 2024-04-25T04:00:00.000Z,
+        oTime: '14:49'
+      },
+      _id: new ObjectId('662f025ed7904849e73770d6'),
+      store: 'CFA - 02679 Dallas (GA) FSU',
+      aType: 'eRQA',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: '',
+      category: 'PRODUCT',
+      subCategory: 'Side Items',
+      assessment: 'Chick-fil-A Waffle Potato Fries® – Finished Product',
+      __v: 0
+    },
+    {
+      question: {
+        id: '21.43.10',
+        qText: 'Are quantities of assembled product in pass-thru chutes less than or equal to quantities listed on iPad and KPS at the chutes?',
+        qFinding: '',
+        fixed: 'no',
+        observer: 'Karmen Carapia',
+        oDate: 2024-04-27T04:00:00.000Z,
+        oTime: '07:11'
+      },
+      _id: new ObjectId('662f025ed7904849e73770d8'),
+      store: 'CFA - 04866 Hiram FSU',
+      aType: 'eRQA',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: '',
+      category: 'PRODUCT',
+      subCategory: 'Breakfast - Cooking and Holding',
+      assessment: 'Lean Breakfast Chicken Entrées Systems - Process Flow',
+      __v: 0
+    },
+    {
+      question: {
+        id: '4.1.14',
+        qText: 'Is Chick-fil-A chicken positioned with rough side down?',
+        qFinding: '• Rough side of filet facing up\r\n• Rough side of filet facing up\r\n',        
+        fixed: 'yes',
+        observer: 'Sydney Kazanjian',
+        oDate: 2024-04-25T04:00:00.000Z,
+        oTime: '12:53'
+      },
+      _id: new ObjectId('662f025ed7904849e73770da'),
+      store: 'CFA - 02679 Dallas (GA) FSU',
+      aType: 'eRQA',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: '',
+      category: 'PRODUCT',
+      subCategory: 'Hot Entrées',
+      assessment: 'Chick-fil-A® Chicken Sandwich - Finished Product',
+      __v: 0
+    },
+    {
+      question: {
+        id: '4.1.17',
+        qText: 'Is bun heel properly toasted?',
+        qFinding: '• Bun heel too light\r\n• Bun heel too light\r\n',
+        fixed: 'yes',
+        observer: 'Sydney Kazanjian',
+        oDate: 2024-04-25T04:00:00.000Z,
+        oTime: '12:54'
+      },
+      _id: new ObjectId('662f025ed7904849e73770dc'),
+      store: 'CFA - 02679 Dallas (GA) FSU',
+      aType: 'eRQA',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: '',
+      category: 'PRODUCT',
+      subCategory: 'Hot Entrées',
+      assessment: 'Chick-fil-A® Chicken Sandwich - Finished Product',
+      __v: 0
+    },
+    {
+      question: {
+        id: '7.1.8',
+        qText: 'Record internal product temperature of sweet Iced Tea and unsweetened Iced Tea when dispensed from tea urn. (Test 1 of each)',
+        qFinding: 'Internal product temperature of sweet Iced Tea and Unsweetened Iced Tea when dispensed from tea urn is warmer than 75°F (23.89°C).\r\n' +
+          '• Sweet Tea: 72 °F\r\n' +
+          '• Unsweet Tea: 63 °F',
+        fixed: 'no',
+        observer: 'Cole Glass',
+        oDate: 2024-04-27T04:00:00.000Z,
+        oTime: '19:13'
+      },
+      _id: new ObjectId('662f025fbc18a553c7679297'),
+      store: 'CFA - 02679 Dallas (GA) FSU',
+      aType: 'eRQA',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: '',
+      category: 'PRODUCT',
+      subCategory: 'Beverages',
+      assessment: 'Iced Tea (Sweet/Unsweetened) - Finished Product',
+      __v: 0
+    },
+    {
+      question: {
+        id: '4.17.14',
+        qText: 'Is clamshell free of excessive stains/smudges or product protruding from clamshell?',
+        qFinding: '• Excessive stains/smudges\r\n• Excessive stains/smudges\r\n',
+        fixed: 'yes',
+        observer: 'Karmen Carapia',
+        oDate: 2024-04-25T04:00:00.000Z,
+        oTime: '12:59'
+      },
+      _id: new ObjectId('662f025fbc18a553c7679299'),
+      store: 'CFA - 04866 Hiram FSU',
+      aType: 'eRQA',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: '',
+      category: 'PRODUCT',
+      subCategory: 'Hot Entrées',
+      assessment: 'Chick-fil-A® Grilled Chicken Sandwich – Finished Product',
+      __v: 0
+    },
+    {
+      question: {
+        id: '301.102.1',
+        qText: 'Are all TCS foods in the boards/cook-line area properly date labeled? Check all refrigeration units in this area to ensure all TCS foods have an accurate date label.',
+        qFinding: '• Observed unlabeled TCS foods in this area. Use the notes section or the Other tab to notate what unlabeled TCS food was observed.\r\n' +
+          '• Observed unlabeled TCS foods in this area. Use the notes section or the Other tab to notate what unlabeled TCS food was observed.\r\n',
+        fixed: 'yes',
+        observer: 'Sydney Kazanjian',
+        oDate: 2024-04-25T04:00:00.000Z,
+        oTime: '12:50'
+      },
+      _id: new ObjectId('662f0260bc18a553c767929b'),
+      store: 'CFA - 02679 Dallas (GA) FSU',
+      aType: 'SAFE Daily Critical',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: 'MEDIUM RISK',
+      category: 'PRODUCTION ENVIRONMENT',
+      subCategory: 'Time and Temperature',
+      assessment: 'Date Labeling TCS Foods',
+      __v: 0
+    },
+    {
+      question: {
+        id: '4.1.8',
+        qText: 'Are there 2 pickle chips (3 if small) spread out in center of bun heel (beneath filet)?',
+        qFinding: '• No pickles\r\n• No pickles\r\n',
+        fixed: 'yes',
+        observer: 'Sydney Kazanjian',
+        oDate: 2024-04-25T04:00:00.000Z,
+        oTime: '12:55'
+      },
+      _id: new ObjectId('662f0260bc18a553c767929d'),
+      store: 'CFA - 02679 Dallas (GA) FSU',
+      aType: 'eRQA',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: '',
+      category: 'PRODUCT',
+      subCategory: 'Hot Entrées',
+      assessment: 'Chick-fil-A® Chicken Sandwich - Finished Product',
+      __v: 0
+    },
+    {
+      question: {
+        id: '302.180.1',
+        qText: 'Is thaw cabinet interior and exterior clean and well maintained? Check door seals, gaskets, interior rails & surfaces, and door handles & exterior surfaces.',
+        qFinding: '• Exterior surfaces such as door handles have build-up of dirt/dust/food particles.\r\n' +
+          '• Exterior surfaces such as door handles have build-up of dirt/dust/food particles.\r\n',
+        fixed: 'yes',
+        observer: 'Scott Wilson',
+        oDate: 2024-04-24T04:00:00.000Z,
+        oTime: '09:40'
+      },
+      _id: new ObjectId('662f0260bc18a553c767929f'),
+      store: 'CFA - 04866 Hiram FSU',
+      aType: 'SAFE Daily Critical',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: 'LOW RISK',
+      category: 'PRODUCTION ENVIRONMENT',
+      subCategory: 'Equipment',
+      assessment: 'Equipment - Thawing Cabinet',
+      __v: 0
+    },
+    {
+      question: {
+        id: '3.7.2',
+        qText: 'Prior to end of cooking cycle, are any fries in dump pan removed or moved to the side to make room for fresh batch of fries?',
+        qFinding: '• New batch added to old batch/fries not moved to make room for new batch\r\n' +
+          '• New batch added to old batch/fries not moved to make room for new batch\r\n',
+        fixed: 'yes',
+        observer: 'Daniel Patrick',
+        oDate: 2024-04-26T04:00:00.000Z,
+        oTime: '12:03'
+      },
+      _id: new ObjectId('662f0260bc18a553c76792a1'),
+      store: 'CFA - 02679 Dallas (GA) FSU',
+      aType: 'eRQA',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: '',
+      category: 'PRODUCT',
+      subCategory: 'Cooking & Holding Products',
+      assessment: 'Holding Chick-fil-A Waffle Potato Fries®',
+      __v: 0
+    },
+    {
+      question: {
+        id: '3.7.2',
+        qText: 'Prior to end of cooking cycle, are any fries in dump pan removed or moved to the side to make room for fresh batch of fries?',
+        qFinding: '• New batch added to old batch/fries not moved to make room for new batch\r\n' +
+          '• New batch added to old batch/fries not moved to make room for new batch\r\n',
+        fixed: 'yes',
+        observer: 'Daniel Patrick',
+        oDate: 2024-04-26T04:00:00.000Z,
+        oTime: '12:03'
+      },
+      _id: new ObjectId('662f0260a6945273ff959c89'),
+      store: 'CFA - 02679 Dallas (GA) FSU',
+      aType: 'eRQA',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: '',
+      category: 'PRODUCT',
+      subCategory: 'Cooking & Holding Products',
+      assessment: 'Holding Chick-fil-A Waffle Potato Fries®',
+      __v: 0
+    },
+    {
+      question: {
+        id: '4.1.13',
+        qText: 'Is foil bag free of excessive stains?',
+        qFinding: '• Excessive stains on foil bag\r\n• Excessive stains on foil bag\r\n',
+        fixed: 'yes',
+        observer: 'Sydney Kazanjian',
+        oDate: 2024-04-25T04:00:00.000Z,
+        oTime: '12:52'
+      },
+      _id: new ObjectId('662f0261a6945273ff959c8c'),
+      store: 'CFA - 02679 Dallas (GA) FSU',
+      aType: 'eRQA',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: '',
+      category: 'PRODUCT',
+      subCategory: 'Hot Entrées',
+      assessment: 'Chick-fil-A® Chicken Sandwich - Finished Product',
+      __v: 0
+    },
+    {
+      question: {
+        id: '230.8.1',
+        qText: 'Is chicken soup base in unopened pouch heated to 190 °F (88 °C) before placing in the warmer? See instructions for how to take temperature of soup base and then enter the temperature:',
+        qFinding: 'Chicken Noodle Soup Base is not heated to 190°F (88°C) before adding chicken and serving.\r\n' +
+          '• Temperature: 167 °F',
+        fixed: 'no',
+        observer: 'Karmen Carapia',
+        oDate: 2024-04-25T04:00:00.000Z,
+        oTime: '12:40'
+      },
+      _id: new ObjectId('662f0261a6945273ff959c8f'),
+      store: 'CFA - 04866 Hiram FSU',
+      aType: 'SAFE Daily Critical',
+      combinedScoreGroup: 'PRODUCT & PRODUCTION ENVIRONMENT',
+      priority: 'IMMEDIATE ACTION',
+      category: 'PRODUCT',
+      subCategory: 'Cooking & Holding Products',
+      assessment: 'Preparing Hearty Breast of Chicken Soup - Temperature',
+      __v: 0
+    }
+  ]

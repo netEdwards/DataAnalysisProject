@@ -1,6 +1,6 @@
 const express = require('express');
 const passport = require('passport');
-const jwt = require('jsonwebtoken');
+const { generateToken } = require('../services/uauth');
 require('dotenv').config();
 const authRoutes = express.Router();
 
@@ -10,22 +10,51 @@ const authRoutes = express.Router();
 //     failureFlash: true
 // }));
 
-
-authRoutes.post('/login', passport.authenticate('local', { session: false }), (req, res) => {
-    if (!req.user) {
-        return res.status(401).send({ message: 'Authentication failed' });
-    }
-    const token = jwt.sign({ id: req.user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-    res.json({ token });
+authRoutes.get('/user', (req, res) => {
+    res.json({
+        username: req.user.username
+    })
 });
 
-authRoutes.get('/login', (req, res) => {
-    res.send('Login page');
+authRoutes.post('/login', (req, res, next) => {
+    passport.authenticate('local', { session: false }, (err, user, info) => {
+        console.log('Error:', err);
+        console.log('User:', user);
+        console.log('Info:', info);
+        
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ message: 'Internal server error' });
+        }
+        if (!user) {
+            return res.status(400).json({ message: info.message || 'Invalid username or password' });
+        }
+
+
+
+        req.login(user, { session: false }, (err) => {
+            if (err) {
+                console.error(err);
+                return res.status(500).json({ message: 'Failed to login' });
+            }
+            try {
+                const token = generateToken(user);
+                return res.json({ user, token });
+            } catch (err) {
+                console.error(err);
+                return res.status(500).json({ message: 'Failed to generate token' });
+            }
+        });
+    })(req, res, next);
 });
+
 
 authRoutes.get('/logout', (req, res) => {
-    req.logout();
-    res.redirect('/');
-})
+    req.logout(() => {
+        res.redirect('/');
+        console.log(req.user);
+    });
+    console.log('User logged out');
+});
 
 module.exports = authRoutes;

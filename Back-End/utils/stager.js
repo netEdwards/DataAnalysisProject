@@ -3,7 +3,7 @@ const fs = require('fs').promises;
 const path = require('path'); 
 const Report = require('../models/cfareports');
 
-console.log(process.env.MONGO_URI)
+
 async function processJsonFilesFromDir(dirPath){
     try{
         const files =  await fs.readdir(dirPath);
@@ -58,8 +58,6 @@ async function readAndProcessJsonFile(filePath){
 
 require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 async function main(){
-    console.log('Connecting to the database');
-    await mg.connect(process.env.MONGO_URI);
     const dirPath = path.join(__dirname, '..','data');
     console.log('Processing files from the directory', dirPath);
     const files = await processJsonFilesFromDir(dirPath);
@@ -67,9 +65,11 @@ async function main(){
     for (const file of files){
         const filePath = path.join(dirPath, file);
         await readAndProcessJsonFile(filePath);
+        await fs.unlink(filePath)
     }
 
-    mg.disconnect();
 }
 
-main().catch(console.error)
+
+
+module.exports = main;

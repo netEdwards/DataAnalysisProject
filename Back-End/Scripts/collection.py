@@ -25,7 +25,7 @@ async def main(page):
     await asyncio.sleep(10)
     await page.wait_for_load_state('domcontentloaded')
     await page.wait_for_load_state('networkidle')
-    await page.wait_for_selector("css=table > tbody > tr", timeout=30000)
+    await page.wait_for_selector("css=table > tbody > tr", timeout=60000)
     rows = await page.query_selector_all("css=table > tbody > tr")
     for i in range(len(rows)):
         print(f'Starting row {i+1}')

@@ -1,0 +1,100 @@
+[
+    {
+        "id": 1,
+        "question": "Is Chilled Grilled Chicken Sub Sandwich packaged according to requirements?",
+        "findings": [
+            "Sub not rolled in parchment paper",
+            "Sub not cut at 45° angle",
+            "Parchment paper torn/wrinkled/dirty",
+            "Scraps of parchment paper hanging from sub",
+            "Ends of parchment paper not folded in neatly",
+            "Parchment paper too loose",
+            "Ingredients/scraps visible between baguette and parchment paper",
+            "No label",
+            "Label not legible",
+            "Label not secured properly",
+            "Parchment paper too tight"
+        ]
+    },
+    {
+        "id": 2,
+        "question": "Is internal product temperature of grilled chicken slices in sub 40°F (4.44°C) or lower? (Test 2 slices of chicken on 1 sub)",
+        "findings": [
+            "Internal temperature of chicken slices above 40°F (4.44°C); Slice 1: 45°F (7.22°C), Slice 2: 43°F (6.11°C)"
+        ]
+    },
+    {
+        "id": 3,
+        "question": "Are ingredients layered in the correct order?",
+        "findings": [
+            "Ingredients not layered in the correct order"
+        ]
+    },
+    {
+        "id": 4,
+        "question": "Do grilled chicken slices meet requirements?",
+        "findings": [
+            "No grilled chicken slices",
+            "Clumped/not spread evenly",
+            "Slices less than ⅛” thick",
+            "Slices more than ⅛” thick",
+            "Gray blood spots in chicken",
+            "Undercooked (red/pink areas)"
+        ]
+    },
+    {
+        "id": 5,
+        "question": "Is timer device used correctly for all hot chicken in kanbans?",
+        "findings": [
+            "Timer device not set correctly for chicken filets",
+            "Timer device not set correctly for spicy filets",
+            "Timer device not set correctly for Nuggets",
+            "Timer device not set correctly for Strips",
+            "Timer device not set correctly for grilled filets",
+            "Timer device not set correctly for Grilled Nuggets"
+        ]
+    },
+    {
+        "id": 6,
+        "question": "Is marked sandwich served or removed by end of holding time?",
+        "findings": [
+            "Held past end of 20 minute holding time",
+            "Other"
+        ]
+    },
+    {
+        "id": 7,
+        "question": "Are 5-count Grilled Nuggets packaged in a #4 paper bowl with lid?",
+        "findings": [
+            "Incorrect bowl/packaging",
+            "Lid not securely attached",
+            "Not served with fork"
+        ]
+    },
+    {
+        "id": 8,
+        "question": "Is parfait lid handled in a food safe manner?",
+        "findings": [
+            "Inside of lid touched with hand/fingers",
+            "Lid placed face down with inside touching surface"   
+        ]
+    },
+    {
+        "id": 9,
+        "question": "Is correct portion of Oreo® cookie crumbs added to Greek Yogurt Parfait?",
+        "findings": [
+            "More than 1 portion of cookie crumbs added",
+            "Less than 1 portion of cookie crumbs added",
+            "Cookie crumbs served in soufflé cup",
+            "Cookie dispenser not used",
+            "Cookie crumb dispenser not fully functional"
+        ]
+    },
+    {
+        "id": 10,
+        "question": "Is marked box of Chick-n-Minis served or removed at or before end of holding time?",
+        "findings": [
+            "Box of Chick-n-Minis held past end of 5 minute boxed holding time"
+        ]
+    }
+]

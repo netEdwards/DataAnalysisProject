@@ -18,7 +18,7 @@ const Lbox = () => {
             });
             if (response.data.token) {
                 console.log('Login successful:', response.data.token);
-                localStorage.setItem('userToken', response.data.token);
+                localStorage.setItem('token', response.data.token);
                 navigate('/home');
             } else {
                 alert('Login failed: ' + response.data.message);
@@ -27,6 +27,15 @@ const Lbox = () => {
             alert('Login failed: ' + (error.response?.data?.message || 'Network error'));
         }
     };
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+        } else {
+            delete axios.defaults.headers.common['Authorization'];
+        }
+    }, []);
 
     return(
         <form onSubmit={handleLogin} className={styles.lbox}>
@@ -56,7 +65,7 @@ const Lbox = () => {
                 />
                 <p>This is provided by <br/> an Admin/Adrian!</p>
             </div>
-            <button type="submit">Enter</button>
+            <button className={styles.BUTT} type="submit">Enter</button>
         </form>
     )
 }

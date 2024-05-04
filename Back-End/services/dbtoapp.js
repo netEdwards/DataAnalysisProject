@@ -10,18 +10,7 @@ require('dotenv').config({path: (__dirname, '../.env')});
 
 class Query {
 
-    constructor(){
-        this.mainQuery();
-    }
-
-    async  mainQuery(){
-        try{
-            await mg.connect(process.env.MONGO_URI);
-            console.log('Connected to the database');
-        }catch (err){
-            console.error('Error connecting to the database', err);
-        }
-    }
+    
     async getDallasReports() {
     //Return all reports for Dallas using the string "CFA - 02679 Dallas (GA) FSU"
         try{
@@ -43,15 +32,28 @@ class Query {
     
     }
     async getPreviousWeeksReports(){
-    //Return all reports from the previous week
         try{
-            const results = await Report.find({oDate: {$lt: new Date(), $gt: new Date() - 7}})
+            const oneWeekAgo = new Date();
+            oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+            const results = await Report.find({"question.oDate": {$lt: new Date(), $gt: oneWeekAgo}});
             return results;
         }catch (err){
             console.error('Error getting reports from the previous week', err);
         }
-    
     }
+    
+    async getPreviousMonthsReports(){
+        try{
+            const oneMonthAgo = new Date();
+            oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+            oneMonthAgo.setDate(oneMonthAgo.getDate() + 1);
+            const results = await Report.find({"question.oDate": {$lt: new Date(), $gt: oneMonthAgo}});
+            return results;
+        }catch (err){
+            console.error('Error getting reports from the previous month', err);
+        }
+    }
+
     async getReportByDateRange(begdate, enddate){
     //Return all reports from the given date
     //Date format should be 'YYYY-MM-DD'
@@ -75,7 +77,7 @@ class Query {
         console.error('Error getting reports from the given date', err);
     }
     }
-        async getReportByAssessmentType(aType){
+    async getReportByAssessmentType(aType){
         try{
             const results = await Report.find({aType: aType})
             return results;

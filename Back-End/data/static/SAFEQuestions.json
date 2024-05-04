@@ -1,0 +1,94 @@
+[
+    {
+        "id": 1,
+        "priority": "Medium Risk",
+        "question": "Is all prepped and in-use produce at the salad prep station in good condition?",
+        "findings": [
+            "Observed moldy produce at the salad prep station."
+        ]
+    },
+    {
+        "id": 2,
+        "priority": "Immediate Action",
+        "question": "Is low contamination risk produce (lemons) rinsed under unfiltered, cold running water before processing? If lemons are not currently being washed, are team members working in the prep area able to demonstrate knowledge of the correct procedures for washing low contamination risk produce?",
+        "findings": [
+           " Lemons not rinsed under unfiltered, cold running water before use.",
+           " Observed lemons soaking in water."
+        ]
+    },
+    {
+        "id": 3,
+        "priority": "High Risk",
+        "question": "Is unwashed produce that comes packaged in a carton (strawberries, grape tomatoes, etc.) removed from the carton before washing and then stored in a different container? Produce should not be washed/stored in the carton it came in.",
+        "findings": [
+            "Strawberries are being washed/stored in the carton they come in.",
+            "Other produce items are being washed/stored in the carton they come in."
+        ]
+    },
+    {
+        "id": 4,
+        "priority": "Low Risk",
+        "question": "Are whole eggs stored in the lower cavity of the salad prep table refrigerator and properly covered to avoid cross-contamination?",
+        "findings": [
+            "Whole or sliced eggs are being held in the rail area of the salad prep table.",
+            "Whole or sliced eggs are not in a covered container in the salad prep table refrigerator."
+        ]
+    },
+    {
+        "id": 5,
+        "priority": "Low Risk",
+        "question": "Are foods and food contact items stored at least 6 inches (15.24 cm) off the floor in the walk-in refrigerator, freezer, and dry storage areas?",
+        "findings": [
+            "Food or food items stored directly on the floor",
+            "Bottom shelf positioned less than 6“ (15.24 cm) off the floor"
+        ]
+    },
+    {
+        "id": 6,
+        "priority": "Low Risk",
+        "question": "Are frozen foods held solidly frozen, in freezers, so that they are hard to the touch?",
+        "findings": [
+            "Frozen product is soft to the touch"
+        ]
+    },
+    {
+        "id": 7,
+        "priority": "Low Risk",
+        "question": "Are all grill brushes in good working condition? Check the condition of the bristles, the squeegee, and the handles to ensure brushes are able to effectively clean and remove debris from grill grates.",
+        "findings": [
+            "Observed grill brush in-use with excessively worn bristles. It is no longer functional for the task of cleaning the grill.",
+            "Observed grill brush in-use with an excessively worn or damaged squeegee. It is no longer functional for the task of cleaning the grill.",
+            "Observed a grill brush in-use that has a damaged handle making it difficult for Team Members to clean the grill grates."
+        ]
+    },
+    {
+        "id": 8,
+        "priority": "High Risk",
+        "question": "Are the side skirts (left & right) and deflector shield present and properly installed on the Garland Grill 2.0? Note: If not installed correctly, chicken will not cook to the proper temperature.",
+        "findings": [
+            "Left side skirt is not present or properly installed.",
+            "Right side skirt is not present or properly installed.",
+            "Deflector Shield is not present or properly installed.",
+            "Frame Skirts or Deflector shield are damaged, warped, cracked, gouged or chipped."
+        ]
+    },
+    {
+        "id": 9,
+        "priority": "Low Risk",
+        "question": "Is the top lid of garland grill clean and well maintained?",
+        "findings": [
+            "Surfaces of grill lid is encrusted with excessive black debris."
+        ]
+    },
+    {
+        "id": 10,
+        "priority": "Medium Risk",
+        "question": "Are open & hybrid fryer baskets in good condition (not missing parts or having loose or dangling pieces)?",
+        "findings": [
+            "Fryer basket missing parts/pieces",
+            "Fryer basket has holes",
+            "Fryer basket is broken or has loose/dangling metal pieces",
+            "Chrome plating on fryer basket chipped/peeling/flaking"
+        ]
+    }
+]

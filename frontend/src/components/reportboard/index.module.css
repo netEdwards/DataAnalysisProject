@@ -1,0 +1,115 @@
+
+.feed{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: 100%;
+    height: 500px;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(30, 44, 56) rgb(20, 30, 37);
+}
+.object{
+    font-family: Karla;
+    display: flex;
+    border-top: 3px solid black;
+    font-size: 15px;
+}
+.object h1{
+    font-size: 20px;
+    width: 50px;
+    margin-right: 15px;
+}
+.object p{
+    width: 126px;
+    height: auto;
+    margin-left: 15px;
+    
+}
+.main{
+    height: 800px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.info{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin-bottom: 80px;
+    font-family: Karla;
+    font-size: 20px;
+}
+
+.sel{
+    margin-bottom: 10px;
+    border: 3px solid rgb(255, 90, 90);
+    border-radius: 30px;
+    width: 150px;
+    height: 40px;
+    color: rgb(255, 248, 248);
+    background-color:rgb(33, 48, 60);
+}
+.sel div{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    background-color: rgb(30, 44, 56);
+    border-radius: 25px;
+    border: none;
+}
+.sel span{
+    
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    font-family: Karla;
+    border: none;
+}
+.controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.controls button{
+    background: none;
+    border: none;
+    color: white;
+    width: 50px;
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+.controls button:hover{
+    color: rgb(255, 147, 147);
+    border-bottom: 5px solid rgb(30, 44, 56);
+}
+
+.datatable{
+    width: 1200px;
+    height: 600px;
+}
+.datatable thead{
+    background-color: rgb(30, 44, 56);
+    color: white;
+    font-family: Karla;
+    font-size: 20px;
+    text-align: center;   
+}
+.datatable th{
+    padding: 0 10px;
+}
+.datatable td{
+    padding: 10px 10px;
+    text-align: center;
+}
+.datatable td:hover{
+    background-color: rgb(30, 44, 56);
+}
+.datatable tbody tr{
+    height: 200px;
+    font-family: Karla;
+    font-size: 18px;
+}
