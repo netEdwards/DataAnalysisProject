@@ -1,0 +1,3 @@
+{
+    "ignore": ["Back-End/data/*", "/Back-End/Scripts/*" ]
+}

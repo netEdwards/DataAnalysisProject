@@ -1,0 +1,24 @@
+.main{
+    font-family: Karla;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1;
+    justify-content: space-around;
+    background-color: rgb(20, 30, 37);
+    border: 2px solid rgb(42, 62, 79);
+}
+.main:hover{
+    background-color: rgb(30, 44, 56);
+}
+.head{
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+    width: 400px;
+}
+.value{
+    grid-column: 2;
+    justify-self: center;
+    align-self: center;
+}

@@ -8,7 +8,7 @@ const NavComp = () => {
     const [data, setData] = useState([]);
     const icon = <i class="fa-solid fa-server"></i>
     const icon2 = <i class="fa-solid fa-video"></i>
-    const icon3 = <i class="fa-solid fa-note-sticky"></i>
+    const icon3 = <i class="fa-solid fa-info"></i>
 
     const logoutButton = () => {
         console.log("Logout Button Clicked");
@@ -25,6 +25,8 @@ const NavComp = () => {
             nav('/data');
         }else if (l === 'home'){
             nav('/home');
+        }else if (l === 'collection'){
+            nav('/collection');
         }
     }  
 
@@ -32,6 +34,7 @@ const NavComp = () => {
         <div id="nav" className={sy.navbox}>
             <button onClick={(e)=>{buttonClick(e, 'home')}}><h1>{icon2}  Feed</h1></button>
             <button onClick={(e)=>{buttonClick(e, 'datapage')}}><h1>{icon}  Data</h1></button>
+            <button onClick={(e)=>{buttonClick(e, 'collection')}}><h1>{icon3}  Info</h1></button>
             <div id="navfooter" className={sy.navfooter}>
                 <h1 className={sy.title}>Food Safety Hub</h1>
                 <p>Note this app is in heavy development and is only a display of progress for a developer.</p>

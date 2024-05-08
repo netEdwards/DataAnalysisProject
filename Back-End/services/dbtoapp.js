@@ -1,7 +1,7 @@
 const mg = require('mongoose');
 const Report = require('../models/cfareports');
 const path = require('path');
-require('dotenv').config({path: (__dirname, '../.env')});
+require('dotenv').config();
 
 // Create queries to get data from MongoDB
 // We need to ensure that we have general queries that can be used to get predefined data groups from MongoDB
@@ -10,7 +10,13 @@ require('dotenv').config({path: (__dirname, '../.env')});
 
 class Query {
 
-    
+    constructor() {
+        if (mg.connection.readyState !== 1) {
+            mg.connect(process.env.MONGO_URI)
+                .then(() => console.log('Connected to MongoDB'))
+                .catch(err => console.error(`Error connecting to MongoDB: ${err}`));
+        }
+    }
     async getDallasReports() {
     //Return all reports for Dallas using the string "CFA - 02679 Dallas (GA) FSU"
         try{

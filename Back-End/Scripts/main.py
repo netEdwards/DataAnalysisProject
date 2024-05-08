@@ -5,7 +5,7 @@ import asyncio
 
 async def init():
     playwright = await async_playwright().start()
-    browser = await playwright.chromium.launch_persistent_context('./Back-End/Scripts', headless=False)
+    browser = await playwright.chromium.launch_persistent_context('./Scripts', headless=True)
     page = await browser.new_page()
     return playwright, browser, page
 

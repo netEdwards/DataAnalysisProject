@@ -9,7 +9,7 @@ async def log_response(response):
     if response.url == 'https://chick-fil-a.compliancemetrix.com/rql/queue/':
         print('Response found saving...')
         json_data = await response.json()
-        data_dir = os.path.join('.', 'Back-End', 'data')
+        data_dir = os.path.join('.', 'data')
         if not os.path.exists(data_dir):
             os.makedirs(data_dir)
         rand = random.randint(0, 100000)

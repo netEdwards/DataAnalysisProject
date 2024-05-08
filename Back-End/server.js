@@ -5,12 +5,13 @@ const { passport} = require('./services/uauth'); // replace './services/uauth' w
 const authRoutes  = require('./routes/authRoutes');
 const registerRoute = require('./routes/createUser');
 const homeRouter = require('./routes/home.js');
-const collectionRouter = require('./routes/collection.js');
+const collectionRoute = require('./routes/collection.js');
 const calenderRoute = require('./routes/nivoCalender.js');
 const pieRoute = require('./routes/pieData.js');
 const rBoardRouter = require('./routes/reportboardRoute.js');
 const demoRouter = require('./routes/demo.js');
 const mg = require('mongoose');
+const assessmentRoute = require('./routes/assessmentData.js');
 require('dotenv').config();
 
 const app = express();
@@ -31,10 +32,11 @@ app.use('/', authRoutes);
 app.use('/', demoRouter);
 app.use('/', passport.authenticate('jwt', { session: false }), registerRoute);
 app.use('/home', passport.authenticate('jwt', { session: false }), homeRouter);
-app.use('/', passport.authenticate('jwt', { session: false }), collectionRouter);
+app.use('/', passport.authenticate('jwt', { session: false }), collectionRoute);
 app.use('/', passport.authenticate('jwt', { session: false }), calenderRoute);
 app.use('/', passport.authenticate('jwt', { session: false }), pieRoute);
 app.use('/', passport.authenticate('jwt', { session: false }), rBoardRouter);
+app.use('/', passport.authenticate('jwt', { session: false }), assessmentRoute);
 
 // =================================================================================
 

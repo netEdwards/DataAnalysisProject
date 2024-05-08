@@ -13,7 +13,7 @@ async def login(page):
     await page.click('.button-primary')   
     print('Logged IN Successfully')
     await page.wait_for_load_state('domcontentloaded')
-    c_path = os.path.join('.', 'Back-End', 'Scripts', 'cookies.json')
+    c_path = os.path.join('.', 'cookies.json')
     cookies = await page.context.cookies()
     with open(c_path, 'w') as f:
         json.dump(cookies, f)

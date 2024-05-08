@@ -5,18 +5,16 @@ import {ResponsiveCalendar} from '@nivo/calendar';
 import { ResponsivePie } from '@nivo/pie';
 import { useEffect, useState } from 'react';
 import ReportBoard from '../../components/reportboard';
+import AssessmentRow from '../../components/aData/adata';
 
 
 const DataPage = () => {
-    const reloadIcon = <i class="fa-solid fa-rotate-right"></i>
-    const updateDB = () => {
-        console.log('Updating the database');
-        const res = axios.get('/update');
-        console.log(res);
-    };
+
     const currentYear = localStorage.getItem('isDemo') === 'true' ? 2023 : new Date().getFullYear();
+    const isDemo = localStorage.getItem('isDemo') === 'true';
     const [cdata, setcData] = useState(null);
     const [pdata, setpData] = useState(null);
+    const [aData, setaData] = useState(null);
     const index1 = 1;
     const index2 = 2;
 
@@ -24,6 +22,7 @@ const DataPage = () => {
     const urlGCD = localStorage.getItem('isDemo') === 'true' ? `/demoYear?index=${index2}` : `/gcd`;
 
     useEffect(() => {
+        axios.get('/aData').then(res => {setaData(res.data); console.log(aData)}).catch(err => {console.error(err)});
         axios.get(urlGCD)
             .then(res => {
                 const data = res.data;
@@ -61,10 +60,6 @@ const DataPage = () => {
             {/* Update Database button */}
             
             <div className={sty.page}>
-                {/* <div className={sty.update}>
-                    <h3>Update Database</h3>
-                    <button className={sty.buttons} onClick={updateDB}>{reloadIcon}</button>
-                </div> */}
                 <div className={sty.datainfo}>
                     <div className={sty.textcon}>
                         <h1>Data Page</h1>
@@ -221,6 +216,13 @@ const DataPage = () => {
                 <div className={sty.infoboard}>
                         {/* The info component. */}
                         <ReportBoard className={sty.rboard} /> 
+                </div>
+                <div className={sty.asscontainer}>
+                    {!isDemo && <div className={sty.cont2}>
+                        {aData && aData.map((data, index) => {
+                            return <AssessmentRow className={sty.aRow} key={index} assessment={data.assessment} value={data.value} />
+                        })}
+                    </div>}
                 </div>
             </div>
         </div>
