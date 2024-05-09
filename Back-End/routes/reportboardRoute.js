@@ -4,10 +4,19 @@ const {google} = require('googleapis');
 require('dotenv').config();
 
 
-const auth = new google.auth.JWT(
-  process.env.GOOGLE_CLIENT_EMAIL, null, process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
-  ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
-);
+const auth = () => {
+  try{
+    return new google.auth.JWT(
+      process.env.GOOGLE_CLIENT_EMAIL, null, process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+      ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
+    );
+  }catch(e){
+    console.log("GOOGLE ERROR: \n GOOGLE ERROR:\n GOOGLE ERROR:",e);
+  }
+}
+
+const sheets = google.sheets({ version: 'v4', auth: auth() });
+const drive = google.drive({ version: 'v3', auth: auth() });
 
 
 rBoardRouter.get('/grdHiram', async (req, res) => {
@@ -78,7 +87,7 @@ rBoardRouter.get('/grdDallasSheet', async (req, res) => {
   console.log(`Created new sheet with ID: ${sheetId}`);
 });
 
-const sheets = google.sheets({ version: 'v4', auth });
+
 
 async function createSheet(title) {
   const response = await sheets.spreadsheets.create({
@@ -137,7 +146,7 @@ async function addData(sheetId, data) {
 
 // DOWNLOAD SHEET
 const fs = require('fs');
-const drive = google.drive({ version: 'v3', auth });
+
 
 async function downloadSheet(sheetId, format = 'csv', res) {
     const response = await drive.files.export({
