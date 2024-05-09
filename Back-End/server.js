@@ -35,7 +35,7 @@ app.use('/home', passport.authenticate('jwt', { session: false }), homeRouter);
 app.use('/', passport.authenticate('jwt', { session: false }), collectionRoute);
 app.use('/', passport.authenticate('jwt', { session: false }), calenderRoute);
 app.use('/', passport.authenticate('jwt', { session: false }), pieRoute);
-app.use('/', passport.authenticate('jwt', { session: false }), rBoardRouter);
+try{app.use('/', passport.authenticate('jwt', { session: false }), rBoardRouter);}catch(e){console.log("GOOGLE ERROR: \n GOOGLE ERROR:\n GOOGLE ERROR:",e);}
 app.use('/', passport.authenticate('jwt', { session: false }), assessmentRoute);
 
 // =================================================================================
