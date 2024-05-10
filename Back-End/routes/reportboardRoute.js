@@ -6,8 +6,9 @@ require('dotenv').config();
 
 const auth = () => {
   try{
+    const serviceAccount = JSON.parse(Buffer.from(process.env.GOOGLE_SERVICE_ACCOUNT_BASE64, 'base64').toString('utf8'));
     return new google.auth.JWT(
-      process.env.GOOGLE_CLIENT_EMAIL, null, process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+      serviceAccount.client_email, null, serviceAccount.private_key,
       ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
     );
   }catch(e){
