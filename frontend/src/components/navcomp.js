@@ -12,7 +12,7 @@ const NavComp = () => {
 
     const logoutButton = () => {
         console.log("Logout Button Clicked");
-        axios.get('/logout');
+        axios.get('/api/logout');
         localStorage.removeItem('token');
         localStorage.removeItem('isDemo');
         nav('/login');

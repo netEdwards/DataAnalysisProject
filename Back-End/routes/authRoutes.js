@@ -18,10 +18,6 @@ authRoutes.get('/user', (req, res) => {
 
 authRoutes.post('/login', (req, res, next) => {
     passport.authenticate('local', { session: false }, (err, user, info) => {
-        console.log('Error:', err);
-        console.log('User:', user);
-        console.log('Info:', info);
-        
         if (err) {
             console.error(err);
             return res.status(500).json({ message: 'Internal server error' });
@@ -29,9 +25,6 @@ authRoutes.post('/login', (req, res, next) => {
         if (!user) {
             return res.status(400).json({ message: info.message || 'Invalid username or password' });
         }
-
-
-
         req.login(user, { session: false }, (err) => {
             if (err) {
                 console.error(err);
@@ -48,11 +41,13 @@ authRoutes.post('/login', (req, res, next) => {
     })(req, res, next);
 });
 
+authRoutes.get('/check', passport.authenticate('jwt', { session: false }), (req, res) => {
+    res.status(200);
+});
 
 authRoutes.get('/logout', (req, res) => {
     req.logout(() => {
         res.redirect('/');
-        console.log(req.user);
     });
     console.log('User logged out');
 });

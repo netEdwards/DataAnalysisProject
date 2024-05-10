@@ -12,7 +12,7 @@ const Lbox = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/login', {
+            const response = await axios.post('/api/login', {
                 username: username,
                 password: password
             });

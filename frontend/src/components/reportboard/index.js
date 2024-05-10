@@ -17,10 +17,10 @@ const ReportBoard = () => {
     const[download, setDownload] = useState(false);
     const isDemo = localStorage.getItem('isDemo') === 'true';
     useEffect(() => {
-        axios.get('/grdHiram').then(res => {
+        axios.get('/api/grdHiram').then(res => {
           setHiramReports(res.data)//setting the hiram reports to its useState value
         }).catch(err => {console.error(err)});
-        axios.get('/grdDallas').then(res => {
+        axios.get('/api/grdDallas').then(res => {
           setDallasReports(res.data)//setting the dallas reports to its useState value
           console.log(res.data);
         }).catch(err => {console.error(err)});
@@ -28,7 +28,7 @@ const ReportBoard = () => {
 
     const handleClick = () => {
       setDownload(true);
-      let url = selected === 1 ? '/grdHiramSheet' : '/grdDallasSheet';
+      let url = selected === 1 ? '/api/grdHiramSheet' : '/api/grdDallasSheet';
       let filename = selected === 1 ? 'HiramReports.csv' : 'DallasReports.csv';
     
       axios({

@@ -36,7 +36,6 @@ rBoardRouter.get('/grdDallas', async (req, res) => {
 const parseReports = async () => {
     const q = new Query();
     const reports = await q.getPreviousWeeksReports();
-    console.log(reports)
     const transformedReports = reports.map(report => {
         return {
             store: report.store,
@@ -60,7 +59,6 @@ const getHiram = async (parsedReport) => {
 
 const getDallas = async (parsedReport) => {
     const dallasReports = parsedReport.filter(report => report.store === 'CFA - 02679 Dallas (GA) FSU');
-    console.log(dallasReports);
     return dallasReports;
 }
 // Routes for creating and piping data to google sheets

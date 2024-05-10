@@ -18,11 +18,11 @@ const DataPage = () => {
     const index1 = 1;
     const index2 = 2;
 
-    const urlGPD = localStorage.getItem('isDemo') === 'true' ? `/demoYear?index=${index1}` : `/gpd`;
-    const urlGCD = localStorage.getItem('isDemo') === 'true' ? `/demoYear?index=${index2}` : `/gcd`;
+    const urlGPD = localStorage.getItem('isDemo') === 'true' ? `/api/demoYear?index=${index1}` : `/api/gpd`;
+    const urlGCD = localStorage.getItem('isDemo') === 'true' ? `/api/demoYear?index=${index2}` : `/api/gcd`;
 
     useEffect(() => {
-        axios.get('/aData').then(res => {setaData(res.data); console.log(aData)}).catch(err => {console.error(err)});
+        axios.get('/api/aData').then(res => {setaData(res.data); console.log(aData)}).catch(err => {console.error(err)});
         axios.get(urlGCD)
             .then(res => {
                 const data = res.data;
@@ -217,12 +217,23 @@ const DataPage = () => {
                         {/* The info component. */}
                         <ReportBoard className={sty.rboard} /> 
                 </div>
-                <div className={sty.asscontainer}>
-                    {!isDemo && <div className={sty.cont2}>
-                        {aData && aData.map((data, index) => {
-                            return <AssessmentRow className={sty.aRow} key={index} assessment={data.assessment} value={data.value} />
-                        })}
-                    </div>}
+                <div className={sty.ass}>
+                    <div className={sty.assinfo}>
+                        <h1>Assessment Info</h1>
+                        <p>
+                            This may seem a bit confusing, but this is the assessment info. Each assessment 
+                            is the type of observation being done, usually giving a hint at an area of 
+                            imporvement. The value is the amount of times that assessment was found noncompilant.
+                            As more data populates, the more you will see here.
+                        </p>
+                    </div>
+                    <div className={sty.asscontainer}>
+                        {!isDemo && <div className={sty.cont2}>
+                            {aData && aData.map((data, index) => {
+                                return <AssessmentRow className={sty.aRow} key={index} assessment={data.assessment} value={data.value} />
+                            })}
+                        </div>}
+                    </div>
                 </div>
             </div>
         </div>

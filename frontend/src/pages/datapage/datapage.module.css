@@ -202,15 +202,39 @@
 }
 
 
-
-.asscontainer{
+.ass{
     grid-row: 7;
     grid-column: 1/5;
     width: 1000px;
     height: 70vh;
     justify-self: center;
-    overflow-y: scroll;
+    overflow-y: hidden;
     margin-bottom: 50px;
+    background-color: rgb(20, 30, 37);
+    border: 5px solid rgb(51, 85, 114);
+    border-radius: 20px;
+    padding: 50px;
+}
+.assinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: Karla;
+    border-bottom: 5px solid rgb(51, 85, 114);
+    margin: 10px;
+    margin-top: 0px;
+    padding: 10px;
+}
+.assinfo h1{
+    font-size: 40px;
+}
+.assinfo p{
+    font-size: 20px;
+}
+.asscontainer{
+    height: 50vh;
+    overflow-y: scroll;
 }
 .aRow{
     margin: 10px;

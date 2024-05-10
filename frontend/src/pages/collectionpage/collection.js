@@ -9,7 +9,7 @@ const Collection = () => {
     const updateDB = () => {
         console.log('Updating the database');
         try{
-        const res = axios.get('/update');
+        const res = axios.get('/api/update');
         console.log(res);
         }catch(err){    
             if (err.response.status === 429){
@@ -21,7 +21,7 @@ const Collection = () => {
     const collectData = () => {
         console.log('Collecting data');
         try{
-        const res = axios.get('/collect');
+        const res = axios.get('/api/collect');
         console.log(res);
         }catch(err){    
             console.error("Error while collecting data!" , err);

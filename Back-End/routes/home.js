@@ -4,7 +4,7 @@ const { Query } = require('../services/dbtoapp');
 const homeRouter = express.Router();
 
 
-homeRouter.get('/', async (req, res) => {
+homeRouter.get('/home', async (req, res) => {
     feedParse(req.query.selection).then((feedData) => {res.send(feedData)}).catch((err) => {console.error(err)});
 });
 
@@ -18,13 +18,10 @@ const feedParse = async (selection) => {
 
     if (selection === '1') {
         reports = await q1.getPreviousWeeksReports();
-        console.log(reports);
     }else if (selection === '2') {
         reports = await q1.getPreviousMonthsReports();
-        console.log(reports);
     }else{
         reports = await q1.getAllReports();
-        console.log(reports);
     }
 
     const feedDataArray = reports.map(report => {

@@ -23,7 +23,7 @@ const Home = () => {
     // Fetching the data for the blah
 
     useEffect(() => {
-        const url = localStorage.getItem('isDemo') === 'true' ? `/demo?selection=${sel}` : `/home?selection=${sel}`;
+        const url = localStorage.getItem('isDemo') === 'true' ? `/api/demo?selection=${sel}` : `/api/home?selection=${sel}`;
         const instance = localStorage.getItem('isDemo') === 'true' ? demoAxios : axios;
     
         instance.get(url)

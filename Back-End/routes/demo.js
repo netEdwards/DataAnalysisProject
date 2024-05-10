@@ -60,7 +60,6 @@ const createCalendarData = (reports) => {
             value: uniqueReportTypesCount
         };
     });
-    console.log(calendarData);
     return calendarData;
 
 };

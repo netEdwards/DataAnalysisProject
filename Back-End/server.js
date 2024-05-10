@@ -25,26 +25,34 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(passport.initialize());
 
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+
 
 // Site routes ======================================================================
-app.use('/', authRoutes);
-app.use('/', demoRouter);
-app.use('/', passport.authenticate('jwt', { session: false }), registerRoute);
-app.use('/home', passport.authenticate('jwt', { session: false }), homeRouter);
-app.use('/', passport.authenticate('jwt', { session: false }), collectionRoute);
-app.use('/', passport.authenticate('jwt', { session: false }), calenderRoute);
-app.use('/', passport.authenticate('jwt', { session: false }), pieRoute);
-try{app.use('/', passport.authenticate('jwt', { session: false }), rBoardRouter);}catch(e){console.log("GOOGLE ERROR: \n GOOGLE ERROR:\n GOOGLE ERROR:",e);}
-app.use('/', passport.authenticate('jwt', { session: false }), assessmentRoute);
+app.use('/api', authRoutes);
+app.use('/api', demoRouter);
+app.use('/api', passport.authenticate('jwt', { session: false }), registerRoute);
+app.use('/api', passport.authenticate('jwt', { session: false }), homeRouter);
+app.use('/api', passport.authenticate('jwt', { session: false }), collectionRoute);
+app.use('/api', passport.authenticate('jwt', { session: false }), calenderRoute);
+app.use('/api', passport.authenticate('jwt', { session: false }), pieRoute);
+try{app.use('/api', passport.authenticate('jwt', { session: false }), rBoardRouter);}catch(e){console.log("GOOGLE ERROR: \n GOOGLE ERROR:\n GOOGLE ERROR:",e);}
+app.use('/api', passport.authenticate('jwt', { session: false }), assessmentRoute);
 
 // =================================================================================
 
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../frontend', 'build', 'index.html'));
+app.use((req, res, next) => {
+  if (req.method === 'GET' && req.accepts('text/html')) {
+    res.sendFile(path.resolve(__dirname, '../frontend', 'build', 'index.html'));
+  } else {
+    next();
+  }
 });
+
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '../frontend', 'build', 'index.html'));
+// });
 
 app.listen(PORT, () => {
    console.log(`Server is running on port http://localhost:${PORT}`);
